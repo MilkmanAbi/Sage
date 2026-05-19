@@ -1,7 +1,7 @@
 # SageTree
 
-> Internal: Sage AP16, fixed the severe Language Spec mismatch in P7-15. AP16 should be clean.
-
+> FUCK, nvm, whole AOT is FUCKED.
+ 
 **A friendlier language for friendlier times.**
 
 SageTree is a new, very new, experimental programming language. It was originally created by one person (Night-Traders-Dev as SageLang), picked up and heavily modified by another (MilkmanAbi), and is currently maintained by a single developer. Progress is slow. That is the honest reality, and we think that is okay.
