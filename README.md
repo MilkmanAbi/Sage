@@ -1,6 +1,6 @@
 # SageTree
 
-> FUCK, nvm, whole AOT is FUCKED.
+> FUCK, nvm, whole AOT is FUCKED. EVERYTHING IS FUCKED MAN, P4-15 was bad. AP16 is also shit. I hate myself so fucking much
  
 **A friendlier language for friendlier times.**
 
