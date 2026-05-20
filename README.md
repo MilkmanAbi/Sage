@@ -1,6 +1,6 @@
 # SageTree
 
-> FUCK, nvm, whole AOT is FUCKED. EVERYTHING IS FUCKED MAN, P4-15 was bad. AP16 is also shit. I hate myself so fucking much. The AOT is SageLang legacy, not SageTree, it's absolutely fucked, fixing it and optimising it - repairing SEVERE memory leak bugs in FrogPond.
+> The AOT is completely broken, it's being massively rewritten and optimised. AP16 is unusable, a bad reference point.
  
 **A friendlier language for friendlier times.**
 
