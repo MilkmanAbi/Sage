@@ -39,6 +39,8 @@ typedef enum {
     JIT_TYPE_DICT     = 6,
     JIT_TYPE_NIL      = 7,
     JIT_TYPE_MIXED    = 8,   // Multiple types observed — can't specialize
+    JIT_TYPE_TUPLE    = 9,
+    JIT_TYPE_INSTANCE = 10,
 } JitTypeTag;
 
 // Per-function profiling data

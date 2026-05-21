@@ -39,6 +39,15 @@ typedef struct {
     AotTypeEnv type_env;
     int opt_level;       // 0-3
     int emit_guards;     // If 1, emit type guards (for JIT interop)
+    // Defer stack — deferred stmts collected per-function, emitted at function exit
+    Stmt* defer_stack[64];
+    int defer_count;
+    // Known C function names (from STMT_PROC/CLASS declarations) — call directly, not via sage_rt_call_fn
+    char known_procs[256][64];
+    int known_proc_count;
+    // Class/struct constructor names — always use SageValue params (no type specialization)
+    char known_ctors[128][64];
+    int known_ctor_count;
 } AotCompiler;
 
 // Lifecycle

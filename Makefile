@@ -100,3 +100,40 @@ test: $(TARGET)
 	@python3 run_tests.py
 
 .PHONY: all clean test
+
+# ── Runtime (IP1-A: compiled Sage binary support) ─────────────────────
+RT_CFLAGS := -O2 -Wall -Wextra -Wno-unused-parameter -std=c11 \
+             -Iruntime -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE
+RT_SRC    := runtime/sage_runtime.c
+RT_OBJ    := obj/rt/sage_runtime.o
+RT_LIB    := obj/rt/libsage_runtime.a
+
+runtime: $(RT_LIB)
+	@echo "  Built: $(RT_LIB)"
+
+$(RT_LIB): $(RT_OBJ) | obj/rt
+	ar rcs $@ $^
+
+$(RT_OBJ): $(RT_SRC) runtime/sage_runtime.h | obj/rt
+	$(CC) $(RT_CFLAGS) -c $< -o $@
+
+obj/rt:
+	@mkdir -p obj/rt
+
+.PHONY: runtime
+
+# ── Sandbox runtime (IP1-B: opt-in, linked only when @sandbox active) ─
+SB_SRC  := runtime/sage_sandbox_rt.c
+SB_OBJ  := obj/rt/sage_sandbox_rt.o
+SB_LIB  := obj/rt/libsage_sandbox_rt.a
+
+sandbox_rt: $(SB_LIB)
+	@echo "  Built: $(SB_LIB)"
+
+$(SB_LIB): $(SB_OBJ) | obj/rt
+	ar rcs $@ $^
+
+$(SB_OBJ): $(SB_SRC) runtime/sage_sandbox_rt.h runtime/sage_runtime.h | obj/rt
+	$(CC) $(RT_CFLAGS) -c $< -o $@
+
+.PHONY: sandbox_rt

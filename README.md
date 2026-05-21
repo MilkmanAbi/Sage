@@ -1,8 +1,8 @@
 # SageTree
 
-> The AOT is completely broken, it's being massively rewritten and optimised. AP16 is unusable, a bad reference point.
- 
 **A friendlier language for friendlier times.**
+
+> IP1-A, 8/8 targeted perf tests PASS, 294/294 interpreter PASS, 121/121 lang PASS (Might be wrong release, uhm, gotta check later), 168/289 fundamentals.
 
 SageTree is a new, very new, experimental programming language. It was originally created by one person (Night-Traders-Dev as SageLang), picked up and heavily modified by another (MilkmanAbi), and is currently maintained by a single developer. Progress is slow. That is the honest reality, and we think that is okay.
 
